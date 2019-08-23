@@ -1,7 +1,16 @@
 language: ruby
+  global:
+  - NODE_ENV=test
+  - PGPORT=5433
+  - PGHOST=localhost
 services:
   - postgresql
 addons:
+   sources:
+    - precise-pgdg-11.4
+    packages:
+    - postgresql-11.4
+    - postgresql-contrib-11.4
   postgresql: '11.4'
   code_climate:
     repo_token:
@@ -11,6 +20,10 @@ before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
+  - sudo cp /etc/postgresql/9.4/main/pg_hba.conf /etc/postgresql/9.5/main/pg_hba.conf
+  - sudo /etc/init.d/postgresql restart
+  - psql -U postgres -c 'create database "iRep_test";'
+  - psql -U postgres iRep_test -c 'create extension "uuid-ossp";'
 script:
   - bundle exec rspec
 after_script:
