@@ -49,3 +49,5 @@ test:
   username: ochowoikongbeh
   password:
   timeout: 5000
+  default: &default
+  host: localhost
