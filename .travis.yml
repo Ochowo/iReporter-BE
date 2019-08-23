@@ -1,6 +1,7 @@
 script:
-  - RAILS_ENV=test bundle exec rake db:migrate --trace
-  - bundle exec rake db:test:prepare
+  - bundle install — jobs=3 — retry=3
+  - bundle exec rake db:create
+  - bundle exec rake db:migrate
   - bundle exec rspec
 addons:
   code_climate:
@@ -13,8 +14,6 @@ before_script:
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
 language: ruby
-script:
-    - bundle exec rails db:reset db:setup db:migrate RAILS_ENV=test
-    - bundle exec rspec
+
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
