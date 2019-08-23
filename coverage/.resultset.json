@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/ochowoikongbeh/Desktop/iReporter/iReporter/app/models/user.rb": [
+      "/Users/ochowoikongbeh/Desktop/iReporter-BE/app/models/user.rb": [
         1,
         1,
         null,
@@ -13,18 +13,18 @@
         1,
         null
       ],
-      "/Users/ochowoikongbeh/Desktop/iReporter/iReporter/app/models/application_record.rb": [
+      "/Users/ochowoikongbeh/Desktop/iReporter-BE/app/models/application_record.rb": [
         1,
         1,
         null
       ],
-      "/Users/ochowoikongbeh/Desktop/iReporter/iReporter/app/mailers/application_mailer.rb": [
+      "/Users/ochowoikongbeh/Desktop/iReporter-BE/app/mailers/application_mailer.rb": [
         0,
         0,
         0,
         0
       ],
-      "/Users/ochowoikongbeh/Desktop/iReporter/iReporter/app/jobs/application_job.rb": [
+      "/Users/ochowoikongbeh/Desktop/iReporter-BE/app/jobs/application_job.rb": [
         0,
         null,
         null,
@@ -33,23 +33,23 @@
         null,
         0
       ],
-      "/Users/ochowoikongbeh/Desktop/iReporter/iReporter/app/controllers/application_controller.rb": [
+      "/Users/ochowoikongbeh/Desktop/iReporter-BE/app/controllers/application_controller.rb": [
         0,
         0
       ],
-      "/Users/ochowoikongbeh/Desktop/iReporter/iReporter/app/channels/application_cable/connection.rb": [
+      "/Users/ochowoikongbeh/Desktop/iReporter-BE/app/channels/application_cable/connection.rb": [
         0,
         0,
         0,
         0
       ],
-      "/Users/ochowoikongbeh/Desktop/iReporter/iReporter/app/channels/application_cable/channel.rb": [
+      "/Users/ochowoikongbeh/Desktop/iReporter-BE/app/channels/application_cable/channel.rb": [
         0,
         0,
         0,
         0
       ]
     },
-    "timestamp": 1566549440
+    "timestamp": 1566562411
   }
 }
