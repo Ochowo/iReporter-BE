@@ -44,7 +44,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: iRep_test
+  database: travis_ci_test
   pool: 5
   username:
   password:
