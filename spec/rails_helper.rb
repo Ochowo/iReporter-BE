@@ -21,7 +21,7 @@ end
 # [...]
 RSpec.configure do |config|
   # [...]
-  # add `FactoryBot` methods
+  # add `FactoryBot` method
   config.include FactoryBot::Syntax::Methods
 
 
