@@ -1,6 +1,6 @@
 # README
 
-<a href="https://codeclimate.com/github/Ochowo/iReporter-BE/test_coverage"><img src="https://api.codeclimate.com/v1/badges/0fbc7ecbc42ea1b9f53a/test_coverage" /></a> [![Build Status](https://travis-ci.com/Ochowo/iReporter-BE.svg?branch=develop)](https://travis-ci.com/Ochowo/iReporter-BE)
+[![Maintainability](https://api.codeclimate.com/v1/badges/0fbc7ecbc42ea1b9f53a/maintainability)](https://codeclimate.com/github/Ochowo/iReporter-BE/maintainability) [![Build Status](https://travis-ci.com/Ochowo/iReporter-BE.svg?branch=develop)](https://travis-ci.com/Ochowo/iReporter-BE)
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
