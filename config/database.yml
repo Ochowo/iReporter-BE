@@ -44,7 +44,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: test
+  database: new_test_iReporter
   pool: 5
   username:
   password:
