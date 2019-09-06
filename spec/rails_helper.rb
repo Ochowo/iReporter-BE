@@ -19,13 +19,16 @@ Shoulda::Matchers.configure do |config|
 end
 
 # [...]
+Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 RSpec.configure do |config|
   # [...]
   # add `FactoryBot` method
   config.include FactoryBot::Syntax::Methods
+  config.include RequestSpecHelper, type: :request
 
 
   # start the transaction strategy as examples are run
   
   # [...]
+  
 end
