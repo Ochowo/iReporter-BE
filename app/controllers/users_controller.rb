@@ -1,18 +1,24 @@
+
 class UsersController < ApplicationController
-    before_action :set_user, only: [:show, :update, :destroy]
-  def signup
-    @user= User.create!(users_params)
-    if @user.save
-      response = { message: 'User created successfully'}
-      render json: response, status: :created 
-    end
-  end
-  
-  def users_params
-  params.permit(:firstname, :lastname, :username, :email, :password )
-  end
-  def set_user
-    @user = User.find(params[:id])
+  skip_before_action :authorize_request, only: :create
+  # POST /signup
+  # return authenticated token upon signup
+  def create
+    user = User.create!(user_params)
+    auth_token = AuthenticateUser.new(user.email, user.password).call
+    response = { message: Message.account_created, auth_token: auth_token }
+    json_response(response, :created)
   end
 
+  private
+
+  def user_params
+    params.permit(
+      :firstname,
+      :lastname,
+      :username,
+      :email,
+      :password
+    )
+  end
 end
