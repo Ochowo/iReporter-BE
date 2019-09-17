@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       post '/' => 'incidents#create'
       get '/' => 'incidents#index'
       get '/:id' => 'incidents#show'
+      put '/:id' => 'incidents#update'
     end
   end
 end

@@ -68,4 +68,23 @@ RSpec.describe 'Incidents API', type: :request do
       end
     end
   end
+
+  describe 'PUT /incidents/:id/location' do
+    let(:valid_attributes) { { location: 'Benue' }.to_json }
+
+    context 'when the record exists' do
+      before { put "/api/incidents/#{incident_id}", params: valid_attributes, headers: headers }
+
+      context 'when the record exists' do
+  
+        it 'updates the record' do
+          expect(response.body).not_to be_empty
+        end
+  
+        it 'returns status code 200' do
+          expect(response).to have_http_status(200)
+        end
+      end
+    end
+  end
 end
