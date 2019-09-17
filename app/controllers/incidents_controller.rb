@@ -17,7 +17,12 @@ class IncidentsController < ApplicationController
 
   def update
     @incident.update(incident_params)
-    json_response(@incident, :ok)
+    json_response(@incidents, :ok)
+  end
+
+  def destroy
+    @incident.destroy
+    head :no_content
   end
   private
 
@@ -26,6 +31,7 @@ class IncidentsController < ApplicationController
   end
 
   def set_incident
-    @incident = Incident.find(params[:id])
+    @incident = current_user.incidents.find(params[:id])
   end
+
 end

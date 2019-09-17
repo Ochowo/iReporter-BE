@@ -87,4 +87,12 @@ RSpec.describe 'Incidents API', type: :request do
       end
     end
   end
+
+  describe 'DELETE /incidents/:id' do
+    before { delete "/api/incidents/#{incident_id}", headers: headers }
+
+    it 'returns status code 204' do
+      expect(response).to have_http_status(204)
+    end
+  end
 end

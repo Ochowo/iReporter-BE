@@ -13,6 +13,7 @@ Rails.application.routes.draw do
       get '/' => 'incidents#index'
       get '/:id' => 'incidents#show'
       put '/:id' => 'incidents#update'
+      delete '/:id' => 'incidents#destroy'
     end
   end
 end
