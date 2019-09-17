@@ -8,4 +8,7 @@ Rails.application.routes.draw do
     post '/signup' => 'users#create'
     post '/login' => 'authentication#authenticate'
   end
+  scope 'incidents' do
+    post '/' => 'incidents#create'
+  end
 end
