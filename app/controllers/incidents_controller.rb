@@ -14,6 +14,11 @@ class IncidentsController < ApplicationController
   def show
     json_response(@incident, :ok)
   end
+
+  def update
+    @incident.update(incident_params)
+    json_response(@incident, :ok)
+  end
   private
 
   def incident_params
