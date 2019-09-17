@@ -26,7 +26,7 @@ RSpec.configure do |config|
   # [...]
   # add `FactoryBot` method
   config.include FactoryBot::Syntax::Methods
-  config.include RequestSpecHelper
+  config.include RequestSpecHelper 
   config.include ControllerSpecHelper
 
   # start the transaction strategy as examples are run

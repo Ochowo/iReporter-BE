@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -12,18 +10,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_190_908_213_949) do
-  # These are extensions that must be enabled in order to support this database
-  enable_extension 'plpgsql'
+ActiveRecord::Schema.define(version: 2019_09_16_173052) do
 
-  create_table 'users', force: :cascade do |t|
-    t.string 'firstname'
-    t.string 'lastname'
-    t.string 'username'
-    t.string 'email'
-    t.datetime 'created_at', precision: 6, null: false
-    t.datetime 'updated_at', precision: 6, null: false
-    t.boolean 'isAdmin', default: false
-    t.string 'password_digest'
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "incidents", force: :cascade do |t|
+    t.string "incident_type"
+    t.string "created_by"
+    t.string "location"
+    t.string "comment"
+    t.string "images"
+    t.string "status", default: "new"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
+
+  create_table "records", force: :cascade do |t|
+    t.string "type"
+    t.string "location"
+    t.string "comment"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "status", default: "new", null: false
+    t.index ["user_id"], name: "index_records_on_user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "firstname"
+    t.string "lastname"
+    t.string "username"
+    t.string "email"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.boolean "isAdmin", default: false
+    t.string "password_digest"
+  end
+
+  add_foreign_key "records", "users"
 end
