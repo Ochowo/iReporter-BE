@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :incident do
-    incident_type { Faker::Lorem.word }
+    incident_type { "redflag" } 
     location { Faker::Address.full_address }
     comment { Faker::Lorem.word }
     created_by { Faker::Lorem.word  }
