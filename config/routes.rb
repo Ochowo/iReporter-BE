@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     scope 'incidents' do
       post '/' => 'incidents#create'
       get '/' => 'incidents#index'
+      get '/:id' => 'incidents#show'
     end
   end
 end
