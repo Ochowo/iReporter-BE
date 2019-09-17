@@ -10,13 +10,17 @@ class IncidentsController < ApplicationController
     @incidents = current_user.incidents
     json_response(@incidents, :ok)
   end
+
+  def show
+    json_response(@incident, :ok)
+  end
   private
 
   def incident_params
     params.permit(:incident_type, :created_by, :location, :comment, :images, :status)
   end
 
-  # def set_incident
-  #   @incident = Incident.find(params[:id])
-  # end
+  def set_incident
+    @incident = Incident.find(params[:id])
+  end
 end
