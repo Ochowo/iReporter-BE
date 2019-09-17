@@ -11,6 +11,10 @@ class User < ApplicationRecord
   validates_presence_of :firstname, :lastname, :email, :password_digest
   validates :email, uniqueness: true, format: { with: URI::MailTo::EMAIL_REGEXP }
   validates :password_digest, length: { minimum: 6 }
+  before_validation { 
+    (self.email = self.email.to_s.downcase)
+  }
+
   # encrypt password
   has_secure_password
 
