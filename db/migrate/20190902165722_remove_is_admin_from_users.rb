@@ -2,6 +2,6 @@
 
 class RemoveIsAdminFromUsers < ActiveRecord::Migration[6.0]
   def change
-    remove_column :users, :isAdmin, :boolean
+    add_column :users, :isAdmin, :boolean, default: false
   end
 end

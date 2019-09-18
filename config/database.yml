@@ -24,7 +24,7 @@ default: &default
 development:
   adapter: postgresql
   encoding: unicode
-  database: iReporter_dev
+  database: postgres://ddwyocrdoxnfrf:718c7c3052e68ba6df7f58ff17819274e44cfe27bc26b51685781e232fabb710@ec2-174-129-227-128.compute-1.amazonaws.com:5432/df9cjvp5072jfj
   pool: 5
   username: ochowoikongbeh
   password:
