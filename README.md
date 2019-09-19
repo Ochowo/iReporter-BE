@@ -29,7 +29,7 @@ Api is deployed [here](https://incident-report-08.herokuapp.com/)
 * Install NodeJS and PostgreSQL on your computer
 * Clone this repository using git clone https://github.com/Ochowo/iReporter-BE.git
 * Run bundle install to install all dependencies
-* Run rails db:migrate t
+* Run rails db:migrate 
 * Run rails s to start the server
 * Navigate to localhost:3000 in browser to access the application
 
@@ -44,6 +44,6 @@ Api is deployed [here](https://incident-report-08.herokuapp.com/)
 
 ## Testing with Postman
 * Install postman as shown [here]: https://www.getpostman.com/
-* Navigate to localhost:3000 in Postman to access the application
+* Navigate to `https://incident-report-08.herokuapp.com/` in Postman to access the application
 * Use available endpoints to access app
 * Run test with npm test
