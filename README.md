@@ -32,6 +32,7 @@ Api is deployed [here](https://incident-report-08.herokuapp.com/)
 * Run rails db:migrate 
 * Run rails s to start the server
 * Navigate to localhost:3000 in browser to access the application
+* Run test with `bundle exec rspec`
 
 #### Available Endpoints
 * `/api/auth/signup` - signup
@@ -46,4 +47,4 @@ Api is deployed [here](https://incident-report-08.herokuapp.com/)
 * Install postman as shown [here]: https://www.getpostman.com/
 * Navigate to `https://incident-report-08.herokuapp.com/` in Postman to access the application
 * Use available endpoints to access app
-* Run test with npm test
+
