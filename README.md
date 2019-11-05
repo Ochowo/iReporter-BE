@@ -26,7 +26,7 @@ Api is deployed [here](https://incident-report-08.herokuapp.com/)
 * Rspec.
 
 #### Getting Started
-* Install NodeJS and PostgreSQL on your computer
+* Install Ruby and PostgreSQL on your computer
 * Clone this repository using git clone https://github.com/Ochowo/iReporter-BE.git
 * Run bundle install to install all dependencies
 * Run rails db:migrate 
